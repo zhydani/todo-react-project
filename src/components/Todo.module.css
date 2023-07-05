@@ -1,0 +1,62 @@
+.todo {
+    margin-top: -4rem;
+}
+
+.todoForm {
+    width: 100%;
+    display: flex;
+}
+  
+.todoForm textarea {
+    width: 100%;
+    background: var(--gray-500);
+    border: 1;
+    border-color: var(--gray-700);
+    resize: none;
+    height: 3.375rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: var(--gray-300);
+}
+  
+/* .todoForm footer {
+    visibility: hidden;
+    max-height: 0;
+}
+   */
+/* .todoForm:focus-within footer {
+    visibility: visible;
+    max-height: none;
+} */
+  
+.todoForm button[type="submit"] {
+    padding: 1rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border: 0;
+    background: var(--blue-500);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    display: inline-flex;
+}
+
+.iconButton{
+    margin-left: 0.5rem;
+    margin-top: -0.2rem;
+}
+  
+.todoForm button[type="submit"]:not(:disabled):hover {
+    background: var(--blue-300);
+}
+  
+.todoForm button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.todoList {
+    margin-top: 2rem;
+}
+  

@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 
 import styles from './Todo.module.css'
-import { Task } from './Task';
+import { Task } from './Task'
+import { PlusCircle } from 'phosphor-react'
 
 export function Todo() {
   const [tasks, setTasks] = useState([
@@ -50,7 +51,8 @@ export function Todo() {
 
         <footer>
           <button type="submit" disabled={isNewTaskEmpty}>
-            Publicar
+            Criar 
+            <PlusCircle size={24} className={styles.iconButton}/>
           </button>
         </footer>
       </form>
