@@ -1,0 +1,40 @@
+.task {
+    margin-top: 0.7rem;
+}
+  
+.taskBox {
+    flex: 1;
+}
+  
+.taskContent {
+    background: var(--gray-500);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1;
+    border-color: var(--gray-400);
+}
+  
+.taskContent header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+  
+.taskContent header button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 2px;
+}
+  
+.taskContent header button:hover {
+    color: var(--red-500);
+}
+  
+.taskContent p {
+    margin-top: 1rem;
+    color: var(--white);
+}
+  
