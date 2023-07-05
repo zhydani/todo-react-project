@@ -34,7 +34,7 @@ export function Task({ content, onDeleteTask }: TaskProps) {
               <Circle size={24} className={styles.circle} />
             }
           </button>
-          <p>{content}</p>
+          <p className={isChecked ? styles.strikethrough : styles.notStyle }>{content}</p>
           <button onClick={handleDeleteTask} title="Deletar tarefa" className={styles.deleteButton}>
             <Trash size={24} />
           </button>

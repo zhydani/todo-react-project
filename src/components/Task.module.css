@@ -56,4 +56,10 @@
 
 .checkCircle {
     color: var(--purple-500);
+    transition: color 0.3s;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    transition: text-decoration 0.3s;
 }
