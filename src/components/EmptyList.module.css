@@ -1,0 +1,14 @@
+.emptyList {
+    text-align: center;
+    color: --grey-300;
+}
+
+.clipboard {
+    color: #525252;
+    margin-bottom: 1rem;
+}
+
+.firstParagraph {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
