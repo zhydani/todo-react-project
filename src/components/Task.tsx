@@ -5,9 +5,10 @@ import { Trash, Circle, CheckCircle } from 'phosphor-react'
 interface TaskProps {
   content: string
   onDeleteTask: (task: string) => void
+  onUpdateCompletedTasksCount: (completed: boolean) => void
 }
 
-export function Task({ content, onDeleteTask }: TaskProps) {
+export function Task({ content, onDeleteTask, onUpdateCompletedTasksCount  }: TaskProps) {
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -19,8 +20,10 @@ export function Task({ content, onDeleteTask }: TaskProps) {
     const check = isChecked
     if (check) {
       setIsChecked(false)
-    }else{
+      onUpdateCompletedTasksCount(false)
+    } else {
       setIsChecked(true)
+      onUpdateCompletedTasksCount(true)
     }
   }
 

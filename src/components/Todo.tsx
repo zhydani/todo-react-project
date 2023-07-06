@@ -13,6 +13,7 @@ export function Todo() {
   const [newTaskText, setNewTaskText] = useState('')
 
   const [createdTasksCount, setCreatedTasksCount] = useState(1)
+  const [completedTasksCount, setCompletedTasksCount] = useState(0)
 
   function handleCrateNewTask(event: FormEvent) {
     event.preventDefault()
@@ -39,6 +40,14 @@ export function Todo() {
     })
 
     setTasks(tasksWithoutDeletedOne)
+  }
+
+  function updateCompletedTasksCount(completed: boolean) {
+    if (completed) {
+      setCompletedTasksCount(prevCount => prevCount + 1) // Incrementa o contador de tarefas concluídas
+    } else {
+      setCompletedTasksCount(prevCount => prevCount - 1) // Decrementa o contador de tarefas concluídas
+    }
   }
 
   const isNewTaskEmpty = newTaskText.length === 0
@@ -72,7 +81,7 @@ export function Todo() {
           </div>
           <div>
             <p className={styles.subTitle}>Concluídas</p>
-            <p className={styles.counter}>0</p>
+            <p className={styles.counter}>{completedTasksCount}</p>
           </div>
         </header>
         {isTaskListEmpty ? (
@@ -80,7 +89,12 @@ export function Todo() {
         ) : (
           <div>
             {tasks.map(task => (
-              <Task key={task} content={task} onDeleteTask={deleteTask} />
+              <Task
+                key={task}
+                content={task}
+                onDeleteTask={deleteTask} 
+                onUpdateCompletedTasksCount={updateCompletedTasksCount}
+              />
             ))}
           </div>
         )}
