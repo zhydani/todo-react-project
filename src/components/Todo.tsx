@@ -12,11 +12,16 @@ export function Todo() {
 
   const [newTaskText, setNewTaskText] = useState('')
 
+  const [createdTasksCount, setCreatedTasksCount] = useState(1)
+
   function handleCrateNewTask(event: FormEvent) {
     event.preventDefault()
 
     setTasks([...tasks, newTaskText])
     setNewTaskText('')
+    setCreatedTasksCount((state) => {
+      return state + 1
+    });
   }
 
   function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -63,7 +68,7 @@ export function Todo() {
         <header className={styles.headerTaskList}>
           <div>
             <p className={styles.title}>Tarefas criadas</p>
-            <p className={styles.counter}>0</p>
+            <p className={styles.counter}>{createdTasksCount}</p>
           </div>
           <div>
             <p className={styles.subTitle}>Concluídas</p>
