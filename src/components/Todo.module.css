@@ -59,4 +59,34 @@
 .taskList {
     margin-top: 5rem;
 }
-  
+
+.headerTaskList {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.headerTaskList div {
+    display: flex;
+}
+
+.title {
+    font-weight: bold;
+    color: var(--blue-300);
+    margin-right: 0.5rem;
+}
+
+.subTitle {
+    font-weight: bold;
+    color: var(--purple-300);
+    margin-right: 0.5rem;
+}
+
+.counter {
+    background-color: var(--gray-400);
+    color: var(--white);
+    font-weight: bold;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    border-radius: 10px;
+}

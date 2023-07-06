@@ -60,8 +60,18 @@ export function Todo() {
       </form>
 
       <div className={styles.taskList}>
+        <header className={styles.headerTaskList}>
+          <div>
+            <p className={styles.title}>Tarefas criadas</p>
+            <p className={styles.counter}>0</p>
+          </div>
+          <div>
+            <p className={styles.subTitle}>Concluídas</p>
+            <p className={styles.counter}>0</p>
+          </div>
+        </header>
         {isTaskListEmpty ? (
-          <EmptyList /> // Renderize o componente de lista vazia quando a lista de tarefas estiver vazia
+          <EmptyList />
         ) : (
           <div>
             {tasks.map(task => (

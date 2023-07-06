@@ -1,6 +1,6 @@
 .emptyList {
     text-align: center;
-    color: --grey-300;
+    color: var(--grey-300);
 }
 
 .clipboard {
